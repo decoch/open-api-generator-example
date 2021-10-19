@@ -1,0 +1,92 @@
+openapi: 3.0.0
+servers:
+  - url: "http://todo.swagger.io/v2"
+info:
+  version: 1.0.0
+  title: OpenAPI Example
+paths:
+  /todos:
+    post:
+      summary: Add a new todo
+      description: ""
+      operationId: addTodo
+      responses:
+        "200":
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Todo"
+      requestBody:
+        $ref: "#/components/requestBodies/Todo"
+    put:
+      summary: Update an existing todo
+      description: ""
+      operationId: updateTodo
+      responses:
+        "200":
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Todo"
+      requestBody:
+        $ref: "#/components/requestBodies/Todo"
+    get:
+      summary: Finds todos
+      operationId: findTodos
+      responses:
+        "200":
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Todo"
+externalDocs:
+  description: Find out more about Swagger
+  url: "http://swagger.io"
+components:
+  requestBodies:
+    Todo:
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Todo"
+      description: Todo object that needs to be added to the store
+      required: true
+  schemas:
+    Todo:
+      title: a Todo
+      description: A todo
+      type: object
+      required:
+        - name
+      properties:
+        id:
+          type: integer
+          format: int64
+        name:
+          type: string
+          example: buy milk
+        status:
+          type: string
+          description: todo status
+          deprecated: true
+          enum:
+            - todo
+            - doing
+            - done
+    ApiResponse:
+      title: An uploaded response
+      description: Describes the result of uploading an image resource
+      type: object
+      properties:
+        code:
+          type: integer
+          format: int32
+        type:
+          type: string
+        message:
+          type: string
