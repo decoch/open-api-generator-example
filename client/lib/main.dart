@@ -99,7 +99,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Future<void> _addTodoItem(String title) async {
     final todo = Todo(
       (b) => b
-        ..id = Random().nextInt(1000000000)
+        ..id = Random().nextInt(1000000000) // FIXME: use UUID v4
         ..name = title,
     );
     await saveTodos(todo);
