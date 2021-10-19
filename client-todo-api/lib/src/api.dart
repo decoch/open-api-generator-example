@@ -12,7 +12,7 @@ import 'package:todo_api/src/auth/oauth.dart';
 import 'package:todo_api/src/api/default_api.dart';
 
 class TodoApi {
-  static const String basePath = r'http://todo.swagger.io/v1';
+  static const String basePath = r'http://localhost:8080/v1';
 
   final Dio dio;
   final Serializers serializers;

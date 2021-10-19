@@ -19,7 +19,7 @@ func NewMockApiService() DefaultApiServicer {
 // AddTodo - Add a new todo
 func (s *MockApiService) AddTodo(ctx context.Context, todo Todo) (ImplResponse, error) {
 	s.Todos[todo.Id] = todo
-	return Response(http.StatusNotImplemented, todo), nil
+	return Response(http.StatusOK, todo), nil
 }
 
 // FindTodos - Finds todos
@@ -28,11 +28,11 @@ func (s *MockApiService) FindTodos(ctx context.Context) (ImplResponse, error) {
 	for  _, value := range s.Todos {
 		v = append(v, value)
 	}
-	return Response(http.StatusNotImplemented, v), nil
+	return Response(http.StatusOK, v), nil
 }
 
 // UpdateTodo - Update an existing todo
 func (s *MockApiService) UpdateTodo(ctx context.Context, todo Todo) (ImplResponse, error) {
 	s.Todos[todo.Id] = todo
-	return Response(http.StatusNotImplemented, todo), nil
+	return Response(http.StatusOK, todo), nil
 }
