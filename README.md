@@ -13,3 +13,17 @@ docker run --rm -v ${PWD}:/local openapitools/openapi-generator-cli generate -i 
 ```bash
 docker run --rm -v ${PWD}:/local openapitools/openapi-generator-cli generate -i /local/todo.yaml -g go-server -o /local/server
 ```
+
+## Directory
+
+### client-todo-api
+
+Generated api client library for the Flutter app.
+
+### client
+
+Flutter app for developing.
+
+## server
+
+Go api server for developing.
