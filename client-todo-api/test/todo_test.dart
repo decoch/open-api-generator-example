@@ -1,5 +1,5 @@
 import 'package:test/test.dart';
-import 'package:openapi/openapi.dart';
+import 'package:todo_api/todo_api.dart';
 
 // tests for Todo
 void main() {

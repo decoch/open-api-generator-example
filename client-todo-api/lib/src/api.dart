@@ -4,20 +4,20 @@
 
 import 'package:dio/dio.dart';
 import 'package:built_value/serializer.dart';
-import 'package:openapi/src/serializers.dart';
-import 'package:openapi/src/auth/api_key_auth.dart';
-import 'package:openapi/src/auth/basic_auth.dart';
-import 'package:openapi/src/auth/bearer_auth.dart';
-import 'package:openapi/src/auth/oauth.dart';
-import 'package:openapi/src/api/default_api.dart';
+import 'package:todo_api/src/serializers.dart';
+import 'package:todo_api/src/auth/api_key_auth.dart';
+import 'package:todo_api/src/auth/basic_auth.dart';
+import 'package:todo_api/src/auth/bearer_auth.dart';
+import 'package:todo_api/src/auth/oauth.dart';
+import 'package:todo_api/src/api/default_api.dart';
 
-class Openapi {
+class TodoApi {
   static const String basePath = r'http://todo.swagger.io/v1';
 
   final Dio dio;
   final Serializers serializers;
 
-  Openapi({
+  TodoApi({
     Dio? dio,
     Serializers? serializers,
     String? basePathOverride,

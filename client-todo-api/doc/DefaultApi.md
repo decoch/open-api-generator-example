@@ -1,8 +1,8 @@
-# openapi.api.DefaultApi
+# todo_api.api.DefaultApi
 
 ## Load the API package
 ```dart
-import 'package:openapi/api.dart';
+import 'package:todo_api/api.dart';
 ```
 
 All URIs are relative to *http://todo.swagger.io/v1*
@@ -21,9 +21,9 @@ Add a new todo
 
 ### Example
 ```dart
-import 'package:openapi/api.dart';
+import 'package:todo_api/api.dart';
 
-final api = Openapi().getDefaultApi();
+final api = TodoApi().getDefaultApi();
 final Todo todo = ; // Todo | Todo object that needs to be added to the store
 
 try {
@@ -62,9 +62,9 @@ Finds todos
 
 ### Example
 ```dart
-import 'package:openapi/api.dart';
+import 'package:todo_api/api.dart';
 
-final api = Openapi().getDefaultApi();
+final api = TodoApi().getDefaultApi();
 
 try {
     final response = api.findTodos();
@@ -99,9 +99,9 @@ Update an existing todo
 
 ### Example
 ```dart
-import 'package:openapi/api.dart';
+import 'package:todo_api/api.dart';
 
-final api = Openapi().getDefaultApi();
+final api = TodoApi().getDefaultApi();
 final Todo todo = ; // Todo | Todo object that needs to be added to the store
 
 try {

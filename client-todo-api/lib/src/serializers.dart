@@ -9,11 +9,11 @@ import 'package:built_value/json_object.dart';
 import 'package:built_value/serializer.dart';
 import 'package:built_value/standard_json_plugin.dart';
 import 'package:built_value/iso_8601_date_time_serializer.dart';
-import 'package:openapi/src/date_serializer.dart';
-import 'package:openapi/src/model/date.dart';
+import 'package:todo_api/src/date_serializer.dart';
+import 'package:todo_api/src/model/date.dart';
 
-import 'package:openapi/src/model/api_response.dart';
-import 'package:openapi/src/model/todo.dart';
+import 'package:todo_api/src/model/api_response.dart';
+import 'package:todo_api/src/model/todo.dart';
 
 part 'serializers.g.dart';
 

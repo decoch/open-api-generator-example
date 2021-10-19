@@ -1,8 +1,8 @@
-# openapi.model.ApiResponse
+# todo_api.model.ApiResponse
 
 ## Load the model package
 ```dart
-import 'package:openapi/api.dart';
+import 'package:todo_api/api.dart';
 ```
 
 ## Properties

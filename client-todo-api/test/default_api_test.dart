@@ -1,10 +1,10 @@
 import 'package:test/test.dart';
-import 'package:openapi/openapi.dart';
+import 'package:todo_api/todo_api.dart';
 
 
 /// tests for DefaultApi
 void main() {
-  final instance = Openapi().getDefaultApi();
+  final instance = TodoApi().getDefaultApi();
 
   group(DefaultApi, () {
     // Add a new todo

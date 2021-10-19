@@ -1,8 +1,8 @@
-# openapi.model.Todo
+# todo_api.model.Todo
 
 ## Load the model package
 ```dart
-import 'package:openapi/api.dart';
+import 'package:todo_api/api.dart';
 ```
 
 ## Properties
