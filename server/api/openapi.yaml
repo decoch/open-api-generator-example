@@ -6,7 +6,7 @@ externalDocs:
   description: Find out more about Swagger
   url: http://swagger.io
 servers:
-- url: http://todo.swagger.io/v2
+- url: http://todo.swagger.io/v1
 paths:
   /todos:
     get:

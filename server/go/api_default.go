@@ -14,6 +14,7 @@ import (
 	"net/http"
 	"strings"
 
+	"github.com/gorilla/mux"
 )
 
 // DefaultApiController binds http requests to an api service and writes the service results to the http response
@@ -52,19 +53,19 @@ func (c *DefaultApiController) Routes() Routes {
 		{
 			"AddTodo",
 			strings.ToUpper("Post"),
-			"/v2/todos",
+			"/v1/todos",
 			c.AddTodo,
 		},
 		{
 			"FindTodos",
 			strings.ToUpper("Get"),
-			"/v2/todos",
+			"/v1/todos",
 			c.FindTodos,
 		},
 		{
 			"UpdateTodo",
 			strings.ToUpper("Put"),
-			"/v2/todos",
+			"/v1/todos",
 			c.UpdateTodo,
 		},
 	}

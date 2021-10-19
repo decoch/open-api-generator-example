@@ -1,6 +1,6 @@
 openapi: 3.0.0
 servers:
-  - url: "http://todo.swagger.io/v2"
+  - url: "http://todo.swagger.io/v1"
 info:
   version: 1.0.0
   title: OpenAPI Example
