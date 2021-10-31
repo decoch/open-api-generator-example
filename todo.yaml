@@ -5,6 +5,21 @@ info:
   version: 1.0.0
   title: OpenAPI Example
 paths:
+  /dynamic_key:
+    get:
+      operationId: dynamicKey
+      responses:
+        "200":
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties:
+                  type: object
+                  properties:
+                    value:
+                      type: string
   /todos:
     post:
       summary: Add a new todo

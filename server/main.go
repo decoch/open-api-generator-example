@@ -19,10 +19,11 @@ import (
 func main() {
 	log.Printf("Server started")
 
-	apiService := openapi.NewMockApiService()
-	apiController := openapi.NewDefaultApiController(apiService)
+	// DefaultApiService := openapi.NewDefaultApiService()
+	DefaultApiService := openapi.NewMockApiService()
+	DefaultApiController := openapi.NewDefaultApiController(DefaultApiService)
 
-	router := openapi.NewRouter(apiController)
+	router := openapi.NewRouter(DefaultApiController)
 
 	log.Fatal(http.ListenAndServe(":8080", router))
 }

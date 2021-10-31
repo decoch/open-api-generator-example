@@ -12,4 +12,5 @@ export 'package:todo_api/src/model/date.dart';
 export 'package:todo_api/src/api/default_api.dart';
 
 export 'package:todo_api/src/model/api_response.dart';
+export 'package:todo_api/src/model/inline_response200.dart';
 export 'package:todo_api/src/model/todo.dart';

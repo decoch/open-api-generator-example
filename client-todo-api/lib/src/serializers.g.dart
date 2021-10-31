@@ -8,6 +8,7 @@ part of 'serializers.dart';
 
 Serializers _$serializers = (new Serializers().toBuilder()
       ..add(ApiResponse.serializer)
+      ..add(InlineResponse200.serializer)
       ..add(Todo.serializer)
       ..add(TodoStatusEnum.serializer))
     .build();

@@ -37,6 +37,7 @@ class _MyHomePageState extends State<MyHomePage> {
     super.initState();
     Future.microtask(() async {
       final todos = await fetchTodos();
+      await fetchDynamicKey();
       setState(() {
         _todoList = todos;
       });
@@ -118,4 +119,9 @@ Future<Todo?> saveTodos(Todo todo) async {
 Future<List<Todo>> fetchTodos() async {
   final response = await TodoApi().getDefaultApi().findTodos();
   return response.data?.toList() ?? [];
+}
+
+Future<void> fetchDynamicKey() async {
+  final response = await TodoApi().getDefaultApi().dynamicKey();
+  print(response);
 }
