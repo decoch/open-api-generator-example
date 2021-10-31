@@ -55,6 +55,12 @@ func (c *DefaultApiController) Routes() Routes {
 			c.AddTodo,
 		},
 		{
+			"DynamicKey",
+			strings.ToUpper("Get"),
+			"/v1/dynamic_key",
+			c.DynamicKey,
+		},
+		{
 			"FindTodos",
 			strings.ToUpper("Get"),
 			"/v1/todos",
@@ -83,6 +89,19 @@ func (c *DefaultApiController) AddTodo(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	result, err := c.service.AddTodo(r.Context(), todoParam)
+	// If an error occurred, encode the error with the status code
+	if err != nil {
+		c.errorHandler(w, r, err, &result)
+		return
+	}
+	// If no error, encode the body and the result code
+	EncodeJSONResponse(result.Body, &result.Code, w)
+
+}
+
+// DynamicKey - 
+func (c *DefaultApiController) DynamicKey(w http.ResponseWriter, r *http.Request) {
+	result, err := c.service.DynamicKey(r.Context())
 	// If an error occurred, encode the error with the status code
 	if err != nil {
 		c.errorHandler(w, r, err, &result)

@@ -13,18 +13,24 @@ import 'package:todo_api/src/date_serializer.dart';
 import 'package:todo_api/src/model/date.dart';
 
 import 'package:todo_api/src/model/api_response.dart';
+import 'package:todo_api/src/model/inline_response200.dart';
 import 'package:todo_api/src/model/todo.dart';
 
 part 'serializers.g.dart';
 
 @SerializersFor([
   ApiResponse,
+  InlineResponse200,
   Todo,
 ])
 Serializers serializers = (_$serializers.toBuilder()
       ..addBuilderFactory(
         const FullType(BuiltList, [FullType(Todo)]),
         () => ListBuilder<Todo>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltMap, [FullType(String), FullType(InlineResponse200)]),
+        () => MapBuilder<String, InlineResponse200>(),
       )
       ..add(const DateSerializer())
       ..add(Iso8601DateTimeSerializer()))

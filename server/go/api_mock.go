@@ -31,6 +31,15 @@ func (s *MockApiService) FindTodos(ctx context.Context) (ImplResponse, error) {
 	return Response(http.StatusOK, v), nil
 }
 
+func (s *MockApiService) DynamicKey(ctx context.Context) (ImplResponse, error) {
+	return Response(200, map[string]InlineResponse200{
+		"key1": InlineResponse200{
+			Value: "value1",
+		},
+	}), nil
+}
+
+
 // UpdateTodo - Update an existing todo
 func (s *MockApiService) UpdateTodo(ctx context.Context, todo Todo) (ImplResponse, error) {
 	s.Todos[todo.Id] = todo

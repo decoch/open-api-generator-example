@@ -21,6 +21,7 @@ import (
 // pass the data to a DefaultApiServicer to perform the required actions, then write the service results to the http response.
 type DefaultApiRouter interface { 
 	AddTodo(http.ResponseWriter, *http.Request)
+	DynamicKey(http.ResponseWriter, *http.Request)
 	FindTodos(http.ResponseWriter, *http.Request)
 	UpdateTodo(http.ResponseWriter, *http.Request)
 }
@@ -32,6 +33,7 @@ type DefaultApiRouter interface {
 // and updated with the logic required for the API.
 type DefaultApiServicer interface { 
 	AddTodo(context.Context, Todo) (ImplResponse, error)
+	DynamicKey(context.Context) (ImplResponse, error)
 	FindTodos(context.Context) (ImplResponse, error)
 	UpdateTodo(context.Context, Todo) (ImplResponse, error)
 }

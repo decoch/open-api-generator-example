@@ -6,8 +6,20 @@ externalDocs:
   description: Find out more about Swagger
   url: http://swagger.io
 servers:
-- url: http://todo.swagger.io/v1
+- url: http://localhost:8080/v1
 paths:
+  /dynamic_key:
+    get:
+      operationId: dynamicKey
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                additionalProperties:
+                  $ref: '#/components/schemas/inline_response_200'
+                type: object
+          description: successful operation
   /todos:
     get:
       operationId: findTodos
@@ -91,4 +103,9 @@ components:
         message:
           type: string
       title: An uploaded response
+      type: object
+    inline_response_200:
+      properties:
+        value:
+          type: string
       type: object

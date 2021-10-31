@@ -3,6 +3,7 @@ README.md
 analysis_options.yaml
 doc/ApiResponse.md
 doc/DefaultApi.md
+doc/InlineResponse200.md
 doc/Todo.md
 lib/src/api.dart
 lib/src/api/default_api.dart
@@ -15,6 +16,7 @@ lib/src/auth/oauth.dart
 lib/src/date_serializer.dart
 lib/src/model/api_response.dart
 lib/src/model/date.dart
+lib/src/model/inline_response200.dart
 lib/src/model/todo.dart
 lib/src/serializers.dart
 lib/todo_api.dart

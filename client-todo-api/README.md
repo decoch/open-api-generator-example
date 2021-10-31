@@ -65,6 +65,7 @@ All URIs are relative to *http://localhost:8080/v1*
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 [*DefaultApi*](doc/DefaultApi.md) | [**addTodo**](doc/DefaultApi.md#addtodo) | **POST** /todos | Add a new todo
+[*DefaultApi*](doc/DefaultApi.md) | [**dynamicKey**](doc/DefaultApi.md#dynamickey) | **GET** /dynamic_key | 
 [*DefaultApi*](doc/DefaultApi.md) | [**findTodos**](doc/DefaultApi.md#findtodos) | **GET** /todos | Finds todos
 [*DefaultApi*](doc/DefaultApi.md) | [**updateTodo**](doc/DefaultApi.md#updatetodo) | **PUT** /todos | Update an existing todo
 
@@ -72,6 +73,7 @@ Class | Method | HTTP request | Description
 ## Documentation For Models
 
  - [ApiResponse](doc/ApiResponse.md)
+ - [InlineResponse200](doc/InlineResponse200.md)
  - [Todo](doc/Todo.md)
 
 

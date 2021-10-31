@@ -37,6 +37,17 @@ func (s *DefaultApiService) AddTodo(ctx context.Context, todo Todo) (ImplRespons
 	return Response(http.StatusNotImplemented, nil), errors.New("AddTodo method not implemented")
 }
 
+// DynamicKey - 
+func (s *DefaultApiService) DynamicKey(ctx context.Context) (ImplResponse, error) {
+	// TODO - update DynamicKey with the required logic for this service method.
+	// Add api_default_service.go to the .openapi-generator-ignore to avoid overwriting this service implementation when updating open api generation.
+
+	//TODO: Uncomment the next line to return response Response(200, map[string]InlineResponse200{}) or use other options such as http.Ok ...
+	//return Response(200, map[string]InlineResponse200{}), nil
+
+	return Response(http.StatusNotImplemented, nil), errors.New("DynamicKey method not implemented")
+}
+
 // FindTodos - Finds todos
 func (s *DefaultApiService) FindTodos(ctx context.Context) (ImplResponse, error) {
 	// TODO - update FindTodos with the required logic for this service method.

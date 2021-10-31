@@ -10,6 +10,7 @@ All URIs are relative to *http://localhost:8080/v1*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**addTodo**](DefaultApi.md#addtodo) | **POST** /todos | Add a new todo
+[**dynamicKey**](DefaultApi.md#dynamickey) | **GET** /dynamic_key | 
 [**findTodos**](DefaultApi.md#findtodos) | **GET** /todos | Finds todos
 [**updateTodo**](DefaultApi.md#updatetodo) | **PUT** /todos | Update an existing todo
 
@@ -51,6 +52,43 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **dynamicKey**
+> BuiltMap<String, InlineResponse200> dynamicKey()
+
+
+
+### Example
+```dart
+import 'package:todo_api/api.dart';
+
+final api = TodoApi().getDefaultApi();
+
+try {
+    final response = api.dynamicKey();
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling DefaultApi->dynamicKey: $e\n');
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**BuiltMap&lt;String, InlineResponse200&gt;**](InlineResponse200.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
